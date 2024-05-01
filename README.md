@@ -43,3 +43,11 @@ data_size – dataのサイズ(バイト数)
 データをデコードした結果、バッファに入りきらなかった場合、エラー<br>
 文字列にdelimiterが入っていない場合、エラー<br>
 delimiterが見つかった時点でプログラム終了<br>
+
+
+# 参考文献
+- [Arduinoでバイナリ送受信のシリアル通信をするときのパケットの構造(Qiita)](https://qiita.com/hideakitai/items/347985528656be03b620)
+- [参考にしたコード(GitHub)](https://github.com/bakercp/PacketSerial/blob/master/src/Encoding/COBS.h)
+- [COBS/Rについて](https://pythonhosted.org/cobs/cobsr-intro.html)
+- [COBSについて(Wikipedia)](https://en.wikipedia.org/wiki/Consistent_Overhead_Byte_Stuffing)
+- [【COBS】：感動のデータエンコーディング革命！奇跡の効率アップ＆サイズ削減で心揺さぶられる未来への扉を開く(Qiita)](https://qiita.com/keek123/items/8eba70953f3dfc9dc395)
