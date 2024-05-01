@@ -10,7 +10,7 @@ COBSR_config.hで要らない機能の項目を0にすることにより、メ�
 
 ## encodeCOBSR
 
-`unsigned int encodeCOBSR(unsigned char *buf,unsigned int buf_size,const unsigned char *data,unsigned int data_size);`<br>
+`size_t encodeCOBSR(unsigned char *buf,size_t buf_size,const unsigned char *data,size_t data_size);`<br>
 char型の文字列をCOBS/Rを使ってエンコードします
 
 パラメーター:<br>
@@ -27,7 +27,7 @@ data_size – dataのサイズ(バイト数)
 
 ## decodeCOBSR
 
-`unsigned int decodeCOBSR(unsigned char *buf,unsigned int buf_size,const unsigned char *data,unsigned int data_size)`<br>
+`size_t decodeCOBSR(unsigned char *buf,size_t buf_size,const unsigned char *data,size_t data_size)`<br>
 COBS/Rを使ってエンコードされたchar型の文字列をデコードします
 
 パラメーター:<br>
