@@ -10,7 +10,9 @@ COBSR_config.hで要らない機能の項目を0にすることにより、メ�
 
 ## encodeCOBSR
 
-`size_t encodeCOBSR(unsigned char *buf,size_t buf_size,const unsigned char *data,size_t data_size);`<br>
+```c++
+size_t encodeCOBSR(void *buf,size_t buf_size,const void *data,size_t data_size);
+```
 char型の文字列をCOBS/Rを使ってエンコードします
 
 パラメーター:<br>
@@ -23,11 +25,14 @@ data_size – dataのサイズ(バイト数)
 エンコードした後のデータのサイズ
 
 注:<br>
+エラーの場合，返り値は0<br>
 データをエンコードした結果、バッファに入りきらなかった場合、エラー
 
 ## decodeCOBSR
 
-`size_t decodeCOBSR(unsigned char *buf,size_t buf_size,const unsigned char *data,size_t data_size)`<br>
+```c++
+size_t decodeCOBSR(void *buf,size_t buf_size,const void *data,size_t data_size)
+```
 COBS/Rを使ってエンコードされたchar型の文字列をデコードします
 
 パラメーター:<br>
@@ -40,9 +45,11 @@ data_size – dataのサイズ(バイト数)
 デコードした後のデータのサイズ
 
 注:<br>
+エラーの場合，返り値は0<br>
 データをデコードした結果、バッファに入りきらなかった場合、エラー<br>
 文字列にdelimiterが入っていない場合、エラー<br>
 delimiterが見つかった時点でプログラム終了<br>
+※この関数で作られた文字列には，末尾にNULL文字が追加されません．%sに注意
 
 
 # 参考文献
