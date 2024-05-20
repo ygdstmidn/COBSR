@@ -11,7 +11,7 @@ COBSR_config.hで要らない機能の項目を0にすることにより、メ�
 ## encodeCOBSR
 
 ```c++
-size_t encodeCOBSR(unsigned char *buf,size_t buf_size,const unsigned char *data,size_t data_size);
+size_t encodeCOBSR(void *buf,size_t buf_size,const void *data,size_t data_size);
 ```
 char型の文字列をCOBS/Rを使ってエンコードします
 
@@ -31,7 +31,7 @@ data_size – dataのサイズ(バイト数)
 ## decodeCOBSR
 
 ```c++
-size_t decodeCOBSR(unsigned char *buf,size_t buf_size,const unsigned char *data,size_t data_size)
+size_t decodeCOBSR(void *buf,size_t buf_size,const void *data,size_t data_size)
 ```
 COBS/Rを使ってエンコードされたchar型の文字列をデコードします
 
