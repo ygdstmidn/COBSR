@@ -7,6 +7,11 @@ namespace lib_ygdstmidn
 
 size_t encodeCOBSR(void *buf, size_t buf_size, const void *data, size_t data_size)
 {
+  if(buf==nullptr||data==nullptr)
+  {
+    return 0;//ポインタのヌルチェック
+  }
+
   unsigned char *cbuf = static_cast<unsigned char *>(buf);
   const unsigned char *cdata = static_cast<const unsigned char *>(data);
 
@@ -67,6 +72,11 @@ size_t encodeCOBSR(void *buf, size_t buf_size, const void *data, size_t data_siz
 
 size_t decodeCOBSR(void *buf,size_t buf_size,const void *data,size_t data_size)
 {
+  if(buf==nullptr||data==nullptr)
+  {
+    return 0;//ポインタのヌルチェック
+  }
+  
   unsigned char *cbuf = static_cast<unsigned char *>(buf);//キャスト変換
   const unsigned char *cdata = static_cast<const unsigned char *>(data);//キャスト変換
 
