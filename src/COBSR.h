@@ -21,6 +21,7 @@ namespace lib_ygdstmidn
  * @param data エンコードしたいデータの入った配列
  * @param data_size dataのサイズ(バイト数)
  * @return エンコードした後のデータのサイズ
+ * @note エラーの場合，返り値は0
  * @note データをエンコードした結果、バッファに入りきらなかった場合、エラー
 */
 size_t encodeCOBSR(void *buf,size_t buf_size,const void *data,size_t data_size);
@@ -36,9 +37,11 @@ size_t encodeCOBSR(void *buf,size_t buf_size,const void *data,size_t data_size);
  * @param data デコードしたいデータの入った配列
  * @param data_size dataのサイズ(バイト数)
  * @return デコードした後のデータのサイズ
+ * @note エラーの場合，返り値は0
  * @note データをデコードした結果、バッファに入りきらなかった場合、エラー
  * @note 文字列にdelimiterが入っていない場合、エラー
  * @note delimiterが見つかった時点でプログラム終了
+ * @note ※この関数で作られた文字列には，末尾にNULL文字が追加されません．%sに注意
 */
 size_t decodeCOBSR(void *buf,size_t buf_size,const void *data,size_t data_size);
 
