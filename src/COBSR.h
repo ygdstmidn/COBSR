@@ -41,6 +41,7 @@ size_t encodeCOBSR(void *buf,size_t buf_size,const void *data,size_t data_size);
  * @note データをデコードした結果、バッファに入りきらなかった場合、エラー
  * @note 文字列にdelimiterが入っていない場合、エラー
  * @note delimiterが見つかった時点でプログラム終了
+ * @note ※この関数で作られた文字列には，末尾にNULL文字が追加されません．%sに注意
 */
 size_t decodeCOBSR(void *buf,size_t buf_size,const void *data,size_t data_size);
 
